@@ -38,6 +38,7 @@ use crate::{
 };
 
 /// SM RoK for reducing [RelSM] -> [RelTrivial])
+#[derive(Clone)]
 pub struct SMProof {
     proof: ScalarMultiplicationWCProof<SecpConfig, TomConfig, 128>,
 }

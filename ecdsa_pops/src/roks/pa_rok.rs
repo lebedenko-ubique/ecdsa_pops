@@ -35,6 +35,7 @@ use crate::{
 };
 
 /// PA RoK for reducing [RelPA] -> [RelTrivial])
+#[derive(Clone)]
 pub struct PAProof {
     proof: PointAdditionProof<SecpConfig, TomConfig>,
 }
