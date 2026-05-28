@@ -17,6 +17,7 @@ use crate::{
 };
 
 /// A proof of possesion of a P256 signature using native arithmetic
+#[derive(Clone)]
 pub struct PoPNativeNizk {
     /// A Bls Generator for committing to the limbs of pk
     ck_bls: G1Affine,
