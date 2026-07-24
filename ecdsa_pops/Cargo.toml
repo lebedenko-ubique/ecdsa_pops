@@ -20,7 +20,7 @@ num-traits = { workspace = true }
 ark-std = { workspace = true }
 ark-ff = { workspace = true }
 ark-ec = { workspace = true }
-ark-serialize = { workspace = true}
+ark-serialize = { workspace = true }
 serde = { workspace = true }
 bincode = { workspace = true }
 rand_core = { workspace = true }
@@ -34,13 +34,8 @@ halo2curves = { workspace = true }
 ark-secp256r1 = { version = "^0.4.0", default-features = false }
 
 
-equality_across_groups = {git = "https://github.com/alexandroszacharakis8/docknetwork-crypto"}
-dock_crypto_utils = {git = "https://github.com/alexandroszacharakis8/docknetwork-crypto"}
-
-[target.'cfg(target_arch = "x86_64")'.dependencies]
-halo2curves = { git = "https://github.com/zaverucha/signature-proof", features = [
-  "asm",
-] }
+equality_across_groups = { git = "https://github.com/alexandroszacharakis8/docknetwork-crypto" }
+dock_crypto_utils = { git = "https://github.com/alexandroszacharakis8/docknetwork-crypto" }
 
 [dev-dependencies]
 criterion = { version = "0.8", features = ["html_reports"] }
@@ -48,6 +43,7 @@ criterion = { version = "0.8", features = ["html_reports"] }
 [features]
 # default = ["print-trace"]
 print-trace = ["ark-std/print-trace", "r1csipa/print-trace"]
+asm = ["halo2curves/asm"]
 
 [[bench]]
 name = "pop_native"

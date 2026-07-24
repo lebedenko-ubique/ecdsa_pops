@@ -22,15 +22,9 @@ rand_core = { workspace = true }
 bellpepper-core = { workspace = true }
 
 
-[target.'cfg(target_arch = "x86_64")'.dependencies]
-halo2curves = { git = "https://github.com/zaverucha/signature-proof", features = [
-  "asm",
-] }
-
-
-
 [dev-dependencies]
 rand = "0.8"
 
 [features]
 print-trace = ["ark-std/print-trace"]
+asm = ["halo2curves/asm"]
